@@ -1,5 +1,7 @@
 # VRChat SDK linux patch
 
+## Warning: By modifying the SDK you are violating the VRChat TOS. Do it at your own risk!
+
 A very primitive patch to add linux support to VRChat SDK
 Basically everything was working but one line which interacted with shell32.dll
 
