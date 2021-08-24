@@ -1,0 +1,63 @@
+diff -urN a/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelAccount.cs b/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelAccount.cs
+--- a/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelAccount.cs	2021-08-24 13:14:56.225207729 +0200
++++ b/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelAccount.cs	2021-08-24 12:53:49.623168694 +0200
+@@ -8,6 +8,7 @@
+ {
+     static bool isInitialized = false;
+     static string clientInstallPath;
++    static string steamappsPath;
+     static bool signingIn = false;
+     static string error = null;
+ 
+@@ -92,6 +93,10 @@
+         if (string.IsNullOrEmpty(clientInstallPath))
+             clientInstallPath = SDKClientUtilities.LoadRegistryVRCInstallPath();
+ 
++        steamappsPath = "";
++        if (EditorPrefs.HasKey("VRC_steamappsPath"))
++            steamappsPath = EditorPrefs.GetString("VRC_steamappsPath");
++
+         signingIn = false;
+         isInitialized = true;
+ 
+diff -urN a/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelSettings.cs b/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelSettings.cs
+--- a/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelSettings.cs	2021-08-24 13:14:56.228541026 +0200
++++ b/Dependencies/VRChat/Editor/ControlPanel/VRCSdkControlPanelSettings.cs	2021-08-24 12:59:48.421421591 +0200
+@@ -142,6 +142,7 @@
+ 
+             // custom vrchat install location
+             OnVRCInstallPathGUI();
++            OnVRCDataPathGui();
+ 
+             EditorGUILayout.EndVertical();
+         }
+@@ -175,6 +176,29 @@
+             window.OnConfigurationChanged();
+         }
+         EditorGUILayout.EndHorizontal();
++
++        EditorGUILayout.Separator();
++    }
++    
++    static void OnVRCDataPathGui()
++    {
++        EditorGUILayout.LabelField("steamapps directory", EditorStyles.boldLabel);
++        EditorGUILayout.LabelField("steamapps: ", steamappsPath);
++        EditorGUILayout.BeginHorizontal();
++        GUILayout.Label("");
++        if (GUILayout.Button("Edit"))
++        {
++            string initPath = "";
++            if (!string.IsNullOrEmpty(steamappsPath))
++                initPath = steamappsPath;
++
++            steamappsPath = EditorUtility.OpenFolderPanel("Choose steamapps directory", initPath, "");
++            
++            EditorPrefs.SetString("VRC_steamappsPath", steamappsPath);
++           
++            window.OnConfigurationChanged();
++        }
++        EditorGUILayout.EndHorizontal();
+ 
+         EditorGUILayout.Separator();
+     }
