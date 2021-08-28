@@ -30,3 +30,7 @@ string text = VRC_SdkBuilder.GetKnownFolderPath(VRC_SdkBuilder.LocalLowGUID) + "
 ```cs
 string text = EditorPrefs.GetString("VRC_steamappsPath") + "/compatdata/438100/pfx/drive_c/users/steamuser/AppData/LocalLow/VRChat/VRChat/Avatars/";
 ```
+
+Edit the file in dnSpy and to generate the patch use xdelta3 like this
+
+`xdelta3 -e -s ORIGINAL_DLL PATCHED_DLL PATCH_FILE`
