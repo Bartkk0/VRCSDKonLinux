@@ -1,0 +1,8 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QVRCSDKBase-Editor.dll > VRC.SDKBase.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QEditor > VRC_SdkBuilder:281\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QEditor > VRC_SdkBuilder:281\\E$"}
+{"rule":"SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA","sentence":"^\\QCurrently only works for avatar SDK, world SDK needs further fixes.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QVRCSDK3A-Editor.dll > VRC.SDK3.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QBuilder > ExportAndTestAvatarBlueprint:11\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QBuilder > ExportAndTestAvatarBlueprint:11\\E$"}
+{"rule":"SENT_START_CONJUNCTIVE_LINKING_ADVERB_COMMA","sentence":"^\\QCurrently only works for avatar SDK, the world SDK needs further fixes.\\E$"}

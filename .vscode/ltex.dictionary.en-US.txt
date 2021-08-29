@@ -1,0 +1,5 @@
+VRChat
+VRCSDK
+steamapps
+GUIDPatch
+dnSpy
