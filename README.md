@@ -17,20 +17,6 @@ Currently only works for avatar SDK, the world SDK needs further fixes.
 
 ### Creating DLL mods
 
-The entire DLL patch is:
-
-VRCSDK3A-Editor.dll > VRC.SDK3.Builder > ExportAndTestAvatarBlueprint:11
-
-\---
-```cs
-string text = VRC_SdkBuilder.GetKnownFolderPath(VRC_SdkBuilder.LocalLowGUID) + "/VRChat/vrchat/Avatars/";
-```
-
-+++
-```cs
-string text = EditorPrefs.GetString("VRC_steamappsPath") + "/compatdata/438100/pfx/drive_c/users/steamuser/AppData/LocalLow/VRChat/VRChat/Avatars/";
-```
-
 Edit the file in dnSpy and to generate the patch use xdelta3 like this
 
 `xdelta3 -e -s ORIGINAL_DLL PATCHED_DLL PATCH_FILE`
