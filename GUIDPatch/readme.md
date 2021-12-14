@@ -3,13 +3,14 @@
 Used for patching folder GUID search. Created this because VRCSDKBase-Editor.dll is the same between SDKs.
 
 Works for:
- - WORLD-2021.08.11.15.16 (Doesn't need the other patch)
- - AVATAR_2021.08.11.15.16 (Needs further fixes)
+ - WORLD_2021.11.24.16 (Needs further fixes)
+ - AVATAR_2021.11.24.16 (Should work, not tested)
 
 
 ## DLL Patch
 
-VRCSDKBase-Editor.dll > VRC.SDKBase.Editor > VRC_SdkBuilder:281
+VRCSDKBase-Editor.dll > VRC.SDKBase.Editor > VRC_SdkBuilder:263
+Method: GetKnownFolderPath
 ```cs
 // On method begin
 if(knownFolderId.ToString() == "a520a1a4-1780-4ff6-bd18-167343c5af16")
