@@ -2,6 +2,8 @@
 
 After a lot of work, i managed to make the world SDK work without any patching needed. Just download the vrchat.exe script and select it in VRChat SDK settings in unity.
 
+Remember to make the script executable.
+
 Limitations:
  - Only 1 instance
  - Reloading doesn't work(probably the client not the SDK)
