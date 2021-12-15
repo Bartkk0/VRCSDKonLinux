@@ -7,6 +7,9 @@ Remember to make the script executable.
 Limitations:
  - Only 1 instance
  - Reloading doesn't work(probably the client not the SDK)
+ - Unable to publish world(problem with case sensitivity)
+
+Some issues are caused by unity saving files with lowercase names and searching for files with uppercase letters in their name.
 
 ## SDK reload patch
 Fixes reloading from SDK side
