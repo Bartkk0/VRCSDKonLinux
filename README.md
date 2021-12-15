@@ -2,10 +2,12 @@
 
 ## Warning: By modifying the SDK you are violating the VRChat TOS. Do it at your own risk!
 
+## World SDK
+Look into WORLD directory
+
+## Avatar SDK
 A very primitive patch to add Linux support to VRChat SDK
 Basically everything was working, but one line which interacted with shell32.dll was broken.
-
-Currently only works for avatar SDK, the world SDK needs further fixes. 
 
 1. Make a backup of your SDK
 2. cd into the GUIDPatch folder

@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+import sys
+from urllib.parse import unquote, quote
+import re
+import os
+
+arg = ' '.join(sys.argv[1:])
+
+f = open('/tmp/vrchatrun.txt', 'w')
+f.write(arg)
+f.close()
+
+url = unquote(arg)
+
+if('/tmp/' in url):
+    url = url.replace('file:////','file://Z:/')
+    url = url.replace('/','\\')
+    url = url.replace('file:\\\\','file://')
+else:
+    url = re.sub(r"////.*drive_c/", '//C:/', url)
+    url = url.replace('/','\\')
+    url = url.replace('file:\\\\','file://')
+
+#print(url.lower())
+#print('xdg-open steam://run/438100//'+quote(url.lower(), ''))
+os.system('xdg-open steam://run/438100//'+quote(url.lower(), ''))
