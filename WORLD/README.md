@@ -5,8 +5,8 @@ After a lot of work, i managed to make the world SDK work without any patching n
 Remember to make the script executable.
 
 Limitations:
- - Only 1 instance
- - Reloading doesn't work(probably the client not the SDK)
+ - You have to have to specify vrchat install location and proton location in vrchat.exe
+ - Reloading doesn't work(probably the client not the SDK) 
  - Unable to publish world(problem with case sensitivity)
 
 Some issues are caused by unity saving files with lowercase names and searching for files with uppercase letters in their name.

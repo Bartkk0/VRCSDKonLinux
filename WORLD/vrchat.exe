@@ -1,15 +1,16 @@
 #!/usr/bin/python
 
 import sys
-from urllib.parse import unquote, quote
+from urllib.parse import unquote
 import re
 import os
 
 arg = ' '.join(sys.argv[1:])
 
-f = open('/tmp/vrchatrun.txt', 'w')
-f.write(arg)
-f.close()
+proton_location = "$HOME/.steam/steam/steamapps/common/Proton\ -\ Experimental"
+vrchat_location = "$HOME/.steam/steam/steamapps/common/VRChat"
+
+#f = open('/tmp/vrchatrun.txt', 'w')
 
 url = unquote(arg)
 
@@ -22,6 +23,9 @@ else:
     url = url.replace('/','\\')
     url = url.replace('file:\\\\','file://')
 
-#print(url.lower())
-#print('xdg-open steam://run/438100//'+quote(url.lower(), ''))
-os.system('xdg-open steam://run/438100//'+quote(url.lower(), ''))
+url = url.replace("--url=", "--url='")
+url = url.replace("vrcw ", "vrcw' ")
+
+#f.write('STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam" STEAM_COMPAT_DATA_PATH=~/.steam/steam/steamapps/compatdata/438100 {proton}/proton run {vrchat}/VRChat.exe {launch_args}'.format(proton=proton_location, vrchat=vrchat_location, launch_args=url))
+#f.close()
+os.system('STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam" STEAM_COMPAT_DATA_PATH={vrchat}/../../compatdata/438100 {proton}/proton run {vrchat}/VRChat.exe {launch_args}'.format(proton=proton_location, vrchat=vrchat_location, launch_args=url))
