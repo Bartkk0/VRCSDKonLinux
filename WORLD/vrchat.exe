@@ -28,4 +28,4 @@ url = url.replace("vrcw ", "vrcw' ")
 
 #f.write('STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam" STEAM_COMPAT_DATA_PATH=~/.steam/steam/steamapps/compatdata/438100 {proton}/proton run {vrchat}/VRChat.exe {launch_args}'.format(proton=proton_location, vrchat=vrchat_location, launch_args=url))
 #f.close()
-os.system('STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam" STEAM_COMPAT_DATA_PATH=~/.steam/steam/steamapps/compatdata/438100 {proton}/proton run {vrchat}/VRChat.exe {launch_args}'.format(proton=proton_location, vrchat=vrchat_location, launch_args=url))
+os.system('STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.steam/steam" STEAM_COMPAT_DATA_PATH={vrchat}/../../compatdata/438100 {proton}/proton run {vrchat}/VRChat.exe {launch_args}'.format(proton=proton_location, vrchat=vrchat_location, launch_args=url))
