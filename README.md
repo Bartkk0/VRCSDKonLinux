@@ -9,7 +9,7 @@ Now using Harmony to avoid DLL patches.
 ### Unity package method
 Import the corresponding unitypackage.
 If you are using the world SDK change steamapps path in SDK settings.
-IF you are using the avatar SDK change the client path in SDK settings to the one in Editor folder.
+If you are using the avatar SDK change the client path in SDK settings to the one in Editor folder.
 
 ### Manual installation
 1. Import SDK.
