@@ -13,7 +13,7 @@ If you are using the avatar SDK change the client path in SDK settings to the on
 
 ### Manual installation
 1. Import SDK.
-2. Download Harmony .NET 4.7 into `Assets/Editor` (Create if doesn't exist).
+2. Download Harmony (https://github.com/pardeike/Harmony/releases) .NET 4.7 into `Assets/Editor` (Create if doesn't exist).
 3. Copy SdkPatchBase.cs into Assets/Editor.
 
 If you are using the Avatar SDK
