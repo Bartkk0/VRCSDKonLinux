@@ -7,7 +7,7 @@ using UnityEngine;
 using VRC.SDK3.Editor.Builder;
 
 [HarmonyPatch(typeof(VRCWorldAssetExporter))]
-[HarmonyPatch("ExportCurrentSceneResource")]
+[HarmonyPatch("ExportCurrentSceneResource", new Type[] { typeof(bool), typeof(Action<string>), typeof(Action<object>) })]
 class ExportCurrentSceneResourcePatch
 {
     static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
