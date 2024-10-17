@@ -1,3 +1,8 @@
+> [!WARNING]
+> I don't have much time to maintain this. A newer patch is available at: \
+> https://befuddledlabs.github.io/LinuxVRChatSDKPatch/ \
+> https://github.com/BefuddledLabs/LinuxVRChatSDKPatch
+
 # VRChat SDK Linux patch (New and improved)
 
 ## Warning: By modifying the SDK you are violating the VRChat TOS. Do it at your own risk!
